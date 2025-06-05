@@ -38,17 +38,51 @@
     .hero {
       display: flex;
       gap: 1rem;
-      align-items: center;
-      margin-bottom: 2rem;
+      align-items: flex-start;
+      text-align: center;
+        margin-bottom: 2rem;
     }
     .hero img {
       height: 50px;
+      margin-bottom: 10rem;
     }
     .hero h2 {
       font-size: 2rem;
       font-weight: bold;
-      color: var(--accent);
+      color: #7a9792;
+      margin-bottom: 5.3rem;
+      margin-right: 6.6rem;
+      animation: wipeReveal 1s ease forwards;
+      overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      clip-path: inset(0 0 0 0);
     }
+    @keyframes wipeReveal {
+     0% {
+        clip-path: inset(0 100% 0 0);
+      }
+    }
+
+
+
+    .tagline{
+      color: #4a6b67;
+      text-align: left;
+      font-size: 80%;
+      position: relative;
+      top: -100px;
+      animation: wipeReveal 1s ease forwards;
+      overflow: hidden;
+      display: block;
+      clip-path: inset(0 0 0 0);
+    }
+    @keyframes wipeReveal {
+      0%{
+        clip-path: inset(0 100% 0 0);
+      }
+    }
+
     .tabs {
       display: flex;
       flex-wrap: wrap;
@@ -57,14 +91,14 @@
       margin-bottom: 2rem;
     }
     .tab-btn {
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1.3rem;
       border-radius: 30px;
       border: none;
       background-color: var(--primary);
       color: #fff;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 1s ease;
       font-size: 0.9rem;
     }
     .tab-btn.active, .tab-btn:hover {
@@ -72,7 +106,7 @@
     }
     .tab-content {
       display: none;
-      animation: fadeIn 0.4s ease-in-out;
+      animation: fadeIn 1s ease-in-out;
     }
     .tab-content.active {
       display: block;
@@ -93,8 +127,21 @@
       border-radius: 6px;
       text-decoration: none;
       font-size: 0.95rem;
-      transition: all 0.2s;
+      transition: all 1s;
     }
+    .tabs-wrapper {
+     background-color: #1f2a2e;  /* Rectangle ka background */
+     padding: 1rem;
+     border-radius: 1rem;
+     margin-top: -9rem; /* Thoda upar shift karne ke liye */
+     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+     animation: fadeIn 1s ease-in-out;
+     justify-content: center;
+     
+    }
+
+
+
     .chapter-btn:hover {
       background: var(--primary);
       color: #fff;
@@ -110,32 +157,33 @@
       font-size: 0.9rem;
     }
   </style>
+  
 </head>
 <body>
   <div class="container">
-    <div class="hero">
+    <div class="hero column-layout">
       <img src="Logo1.png" alt="Medhavardhan Logo">
-      <div>
+      <div class="MEDHAVARDHAN">
         <h2>MEDHAVARDHAN</h2>
-        <p>Make your skills stronger than the companies think, improve your abilities one step further than they want.</p>
+        <p class="tagline">Make your skills stronger than the companies think, improve your abilities one step further than they want.</p>
       </div>
     </div>
-
-    <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('class1')">Class 1</button>
-      <button class="tab-btn" onclick="showTab('class2')">Class 2</button>
-      <button class="tab-btn" onclick="showTab('class3')">Class 3</button>
-      <button class="tab-btn" onclick="showTab('class4')">Class 4</button>
-      <button class="tab-btn" onclick="showTab('class5')">Class 5</button>
-      <button class="tab-btn" onclick="showTab('class6')">Class 6</button>
-      <button class="tab-btn" onclick="showTab('class7')">Class 7</button>
-      <button class="tab-btn" onclick="showTab('class8')">Class 8</button>
-      <button class="tab-btn" onclick="showTab('class9')">Class 9</button>
-      <button class="tab-btn" onclick="showTab('class10')">Class 10</button>
-      <button class="tab-btn" onclick="showTab('class11')">Class 11</button>
-      <button class="tab-btn" onclick="showTab('class12')">Class 12</button>
-    </div>
-
+     <div class="tabs-wrapper">
+       <div class="tabs">
+         <button class="tab-btn active" onclick="showTab('class1')">Class 1</button>
+         <button class="tab-btn" onclick="showTab('class2')">Class 2</button>
+         <button class="tab-btn" onclick="showTab('class3')">Class 3</button>
+         <button class="tab-btn" onclick="showTab('class4')">Class 4</button>
+         <button class="tab-btn" onclick="showTab('class5')">Class 5</button>
+         <button class="tab-btn" onclick="showTab('class6')">Class 6</button>
+         <button class="tab-btn" onclick="showTab('class7')">Class 7</button>
+         <button class="tab-btn" onclick="showTab('class8')">Class 8</button>
+         <button class="tab-btn" onclick="showTab('class9')">Class 9</button>
+         <button class="tab-btn" onclick="showTab('class10')">Class 10</button>
+         <button class="tab-btn" onclick="showTab('class11')">Class 11</button>
+         <button class="tab-btn" onclick="showTab('class12')">Class 12</button>
+       </div>
+     </div>
     <!-- Tab contents will be inserted here -->
     <div id="tabContents"></div>
 
@@ -176,8 +224,11 @@
       class10: [
         "Real Numbers", "Polynomials", "Pair of Linear Equations in Two Variables", "Quadratic Equations", "Arithmetic Progressions", "Triangles", "Coordinate Geometry", "Introduction to Trigonometry", "Some Applications of Trigonometry", "Circles", "Constructions", "Areas Related to Circles", "Surface Areas and Volumes", "Statistics", "Probability"
       ],
-      class11: [...document.querySelector('#class11')?.innerText?.split('\n').slice(1) || []],
-      class12: [...document.querySelector('#class12')?.innerText?.split('\n').slice(1) || []]
+      class11: [
+        "Sets",  "Relations and Functions",  "Trigonometric Functions",  "Principle of Mathematical Induction",  "Complex Numbers and Quadratic Equations",  "Linear Inequalities",  "Permutation and Combination",  "Binomial Theorem",  "Sequences and Series",  "Straight Lines",  "Conic Sections",  "Introduction to Three Dimensional Geometry",  "Limits and Derivatives",  "Mathematical Reasoning",  "Statistics",  "Probability"
+      ],
+      class12: ["Relations and Functions", "Inverse Trigonometric Functions", "Matrices", "Determinants", "Continuity and Differentiability", "Application of Derivatives", "Integrals", "Application of Integrals", "Differential Equations", "Vector Algebra", "Three Dimensional Geometry", "Linear Programming", "Probability"        
+      ],
     };
 
     const container = document.getElementById("tabContents");
