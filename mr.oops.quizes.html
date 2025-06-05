@@ -48,6 +48,11 @@
 </style>
 <!-- Cute Rotating Gear ka kaaam end ho gya abb hehehe  -->
 
+<style>
+  body {
+    overflow-x: hidden;
+  }
+</style>
 
 
 
@@ -76,12 +81,13 @@
     </div>
   </div>
 
-  <!-- Mr. OOPS Button -->
-  <div class="flex justify-center mt-10">
-    <button onclick="toggleQuiz()" class="px-6 py-2 bg-red-600 rounded-xl text-lg font-semibold hover:bg-red-700 transition-all">
-      Mr. OOPS
-    </button>
-  </div>
+<!-- Mr. OOPS Button -->
+<div class="flex justify-center mt-10">
+  <button onclick="toggleQuiz()" class="px-8 py-3 bg-green-500 text-gray-900 font-bold text-lg rounded-xl shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-xl active:ring-2 active:ring-green-300">
+    Mr. OOPS
+  </button>
+</div>
+
 <!-- ye moving box wala part hai jo </style> tak gya hai -->
 <div class="absolute bottom-[10%] right-[10%] w-20 h-20 bg-white opacity-10 rotate-12 animate-float-slow rounded-xl shadow-xl"></div>
 
@@ -109,7 +115,7 @@
   animation: slideX 8s linear infinite;
 }
 </style>
-<!---to guy's yah par end hotab hai rainbow strip kaisa lagaa jarur batana -->
+<!---to guy's yah par end hotab hai rainbow strip kaisa lagaa jarur batana  mscmnzcmmdcv -->
 
 
 
@@ -119,16 +125,17 @@
   <div id="quizBox" class="hidden mt-10 w-full max-w-xl mx-auto bg-white text-black rounded-xl shadow-lg p-6 space-y-4">
     <h2 class="text-xl font-bold text-center text-gray-800">Let's Begin the Quiz!</h2>
     
-    <!-- Example Question -->
-    <div>
-      <p class="font-semibold">Q1. What does OOPS stand for?</p>
-      <ul class="mt-2 space-y-1">
-        <li><input type="radio" name="q1" /> Object Oriented Programming System</li>
-        <li><input type="radio" name="q1" /> Original Output Processing Server</li>
-        <li><input type="radio" name="q1" /> Ordered Object Prototype Setup</li>
-        <li><input type="radio" name="q1" /> None of the above</li>
-      </ul>
-    </div>
+    
+    
+      <div><!-- Example Question -->
+        <p class="font-semibold">Q1. What does OOPS stand for?</p>
+        <ul class="mt-2 space-y-1">
+          <li><input type="radio" name="q1" /> Object Oriented Programming System</li>
+          <li><input type="radio" name="q1" /> Original Output Processing Server</li>
+          <li><input type="radio" name="q1" /> Ordered Object Prototype Setup</li>
+          <li><input type="radio" name="q1" /> None of the above</li>
+        </ul>
+      </div>
 
     <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Next</button>
   </div>
@@ -138,5 +145,8 @@
       document.getElementById('quizBox').classList.toggle('hidden');
     }
   </script>
+  
+
+
 </body>
 </html>
