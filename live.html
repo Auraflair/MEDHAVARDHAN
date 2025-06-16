@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medhaavardhan Welcome</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen relative overflow-hidden font-sans text-white" style="background-color: #2e3d3a;">
+
+  <!-- Background soft circles -->
+  <div class="fixed inset-0 -z-10">
+    <div class="absolute top-1/4 left-1/4 w-40 h-40 bg-[#4a6b67] opacity-10 rounded-full animate-pulse"></div>
+    <div class="absolute top-3/4 left-2/3 w-56 h-56 bg-[#4a6b67] opacity-10 rounded-full animate-bounce"></div>
+    <div class="absolute top-1/3 right-1/3 w-32 h-32 bg-[#4a6b67] opacity-10 rounded-full animate-spin-slow"></div>
+  </div>
+
+  <!-- Floating box -->
+  <div class="absolute bottom-[10%] right-[10%] w-20 h-20 bg-[#4a6b67] opacity-10 rotate-12 animate-float-slow rounded-xl shadow-xl"></div>
+
+  <!-- Gradient strip -->
+  <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#4a6b67] via-[#3b514d] to-[#2e3d3a] animate-slide-x opacity-20"></div>
+
+  <!-- Logo + Title -->
+  <div class="flex items-center p-4">
+    <img src="Logo1.png" alt="Logo1" class="h-16 mr-3">
+    <div>
+      <h1 class="text-2xl md:text-3xl font-bold tracking-widest">MEDHAAVARDHAN</h1>
+      <p class="text-gray-300 text-sm">Empowering Minds, Enabling Futures</p>
+    </div>
+  </div>
+
+  <!-- Center faded welcome text -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <h2 class="text-4xl md:text-6xl font-bold opacity-10 select-none">Welcome to The League</h2>
+  </div>
+
+  <!-- Animations -->
+  <style>
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 20s linear infinite;
+    }
+    @keyframes float-slow {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-1px); }
+      100% { transform: translateY(0); }
+    }
+    .animate-float-slow {
+      animation: float-slow 6s ease-in-out infinite;
+    }
+    @keyframes slideX {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .animate-slide-x {
+      animation: slideX 8s linear infinite;
+    }
+  </style>
+
+</body>
+</html>
