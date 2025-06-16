@@ -6,147 +6,81 @@
   <title>Medhaavardhan Quiz</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white font-sans min-h-screen p-4">
+<body class="text-white font-sans min-h-screen p-4" style="background-color: #0f1615;">
 
+  <!-- Background circles -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-40 h-40 bg-blue-500 opacity-10 rounded-full animate-pulse"></div>
+    <div class="absolute top-3/4 left-2/3 w-56 h-56 bg-red-500 opacity-10 rounded-full animate-bounce"></div>
+    <div class="absolute top-1/3 right-1/3 w-32 h-32 bg-green-400 opacity-10 rounded-full animate-spin-slow"></div>
+  </div>
 
-  <!-- YE BACKGROUND KA CODE HAI RE BABA JO KI LINE 28 TAK JA RHA HAI  -->
-    <!-- ye tino div me circular shapes ka properties manage kar skte ho and uske
-     niche animations hai ok? -->
-<div class="fixed inset-0 -z-10 overflow-hidden">
-  <div class="absolute top-1/4 left-1/4 w-40 h-40 bg-blue-500 opacity-10 rounded-full animate-pulse"></div>
-  <div class="absolute top-3/4 left-2/3 w-56 h-56 bg-red-500 opacity-10 rounded-full animate-bounce"></div>
-  <div class="absolute top-1/3 right-1/3 w-32 h-32 bg-green-400 opacity-10 rounded-full animate-spin-slow"></div>
-</div>
+  <style>
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 20s linear infinite;
+    }
+    @keyframes slideX {
+      0% {transform: translateX(-100%);}
+      100% {transform: translateX(100%);}
+    }
+    .animate-slide-x {
+      animation: slideX 8s linear infinite;
+    }
+    body {
+      overflow-x: hidden;
+    }
+  </style>
 
-<!-- Custom style -->
-<style>
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-</style>
- <!-- YE BACKGROUND KA CODE KHATAM HO GYA-->
- 
-   <!-- Cute Rotating Gear ka code yaha hai -->
-<div class="absolute top-1/3 right-1 w-24 h-24 opacity-20 animate-spin-slow">
-  <svg viewBox="0 0 512 512" fill="#48BB78" xmlns="http://www.w3.org/2000/svg">
-    <path d="M487.4 315.7l-41.6-24a193.2 193.2 0 000-71.4l41.6-24a12 12 0 005.5-14.9l-45.5-78.7a12 12 0 00-14.9-5.5l-41.6 24a192.7 192.7 0 00-61.8-35.7V24a12 12 0 00-12-12h-91a12 12 0 00-12 12v48.5a192.7 192.7 0 00-61.8 35.7l-41.6-24a12 12 0 00-14.9 5.5L19 181.4a12 12 0 005.5 14.9l41.6 24a193.2 193.2 0 000 71.4l-41.6 24a12 12 0 00-5.5 14.9l45.5 78.7a12 12 0 0014.9 5.5l41.6-24a192.7 192.7 0 0061.8 35.7V488a12 12 0 0012 12h91a12 12 0 0012-12v-48.5a192.7 192.7 0 0061.8-35.7l41.6 24a12 12 0 0014.9-5.5l45.5-78.7a12 12 0 00-5.5-14.9zM256 336a80 80 0 1180-80 80.1 80.1 0 01-80 80z"/>
-  </svg>
-</div>
-<!-- Cute Rotating Gear ka animation wala part -->
- <style>
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spin-slow 7s linear infinite;
-}
-</style>
-<!-- Cute Rotating Gear ka kaaam end ho gya abb hehehe  -->
+  <!-- Rotating gear -->
+  <div class="absolute top-1/3 right-1 w-24 h-24 opacity-20 animate-spin-slow">
+    <svg viewBox="0 0 512 512" fill="#48BB78" xmlns="http://www.w3.org/2000/svg">
+      <path d="M487.4 315.7l-41.6-24a193.2 193.2 0 000-71.4l41.6-24a12 12 0 005.5-14.9l-45.5-78.7a12 12 0 00-14.9-5.5l-41.6 24a192.7 192.7 0 00-61.8-35.7V24a12 12 0 00-12-12h-91a12 12 0 00-12 12v48.5a192.7 192.7 0 00-61.8 35.7l-41.6-24a12 12 0 00-14.9 5.5L19 181.4a12 12 0 005.5 14.9l41.6 24a193.2 193.2 0 000 71.4l-41.6 24a12 12 0 00-5.5 14.9l45.5 78.7a12 12 0 0014.9 5.5l41.6-24a192.7 192.7 0 0061.8 35.7V488a12 12 0 0012 12h91a12 12 0 0012-12v-48.5a192.7 192.7 0 0061.8-35.7l41.6 24a12 12 0 0014.9-5.5l45.5-78.7a12 12 0 00-5.5-14.9zM256 336a80 80 0 1180-80 80.1 80.1 0 01-80 80z"/>
+    </svg>
+  </div>
 
-<style>
-  body {
-    overflow-x: hidden;
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Header: Logo + Name & Tagline -->
+  <!-- Header -->
   <div class="flex items-start">
-    <!-- Logo -->
     <img src="Logo1.png" alt="Logo1" class="h-20 mr-3" />
-    
-    <!-- Name & Tagline vertically aligned -->
     <div>
       <h1 class="text-2xl md:text-3xl font-bold tracking-widest">MEDHAAVARDHAN</h1>
       <p class="text-gray-300 mt-1">Empowering Minds, Enabling Futures</p>
     </div>
   </div>
 
-<!-- Mr. OOPS Button -->
-<div class="flex justify-center mt-10">
-  <button onclick="toggleQuiz()" class="px-8 py-3 bg-green-500 text-gray-900 font-bold text-lg rounded-xl shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-xl active:ring-2 active:ring-green-300">
-    Mr. OOPS
-  </button>
-</div>
-
-<!-- ye moving box wala part hai jo </style> tak gya hai -->
-<div class="absolute bottom-[10%] right-[10%] w-20 h-20 bg-white opacity-10 rotate-12 animate-float-slow rounded-xl shadow-xl"></div>
-
-<style>
-@keyframes float-slow {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-1px); }
-  100% { transform: translateY(0); }
-}
-.animate-float-slow {
-  animation: float-slow 6s ease-in-out infinite;
-}
-</style>
-
-<!-- so guy's here's th code for moving border rainbow strip colorful and ammazing 
- so give me rating of this design  at auraflair40@gmail.com i'm waiting for you  -->
-<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 animate-slide-x opacity-30"></div>
-
-<style>
-@keyframes slideX {
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(100%);}
-}
-.animate-slide-x {
-  animation: slideX 8s linear infinite;
-}
-</style>
-<!---to guy's yah par end hotab hai rainbow strip kaisa lagaa jarur batana  mscmnzcmmdcv -->
-
-
-
-
-
-  <!-- Quiz Interface (Initially hidden) -->
-  <div id="quizBox" class="hidden mt-10 w-full max-w-xl mx-auto bg-white text-black rounded-xl shadow-lg p-6 space-y-4">
-    <h2 class="text-xl font-bold text-center text-gray-800">Let's Begin the Quiz!</h2>
-    
-    
-    
-      <div><!-- Example Question -->
-        <p class="font-semibold">Q1. What does OOPS stand for?</p>
-        <ul class="mt-2 space-y-1">
-          <li><input type="radio" name="q1" /> Object Oriented Programming System</li>
-          <li><input type="radio" name="q1" /> Original Output Processing Server</li>
-          <li><input type="radio" name="q1" /> Ordered Object Prototype Setup</li>
-          <li><input type="radio" name="q1" /> None of the above</li>
-        </ul>
-      </div>
-
-    <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Next</button>
+  <!-- Mr. OOPS Button -->
+  <div class="flex justify-center mt-10">
+    <a href="mr-oops.html" style="background-color: #da0303;" class="px-8 py-3 rounded-xl shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-xl hover:opacity-80 font-bold text-lg text-white">
+      Play Live
+    </a>
   </div>
 
-  <script>
-    function toggleQuiz() {
-      document.getElementById('quizBox').classList.toggle('hidden');
-    }
-  </script>
-  
+  <!-- NCERT Subjects Tab -->
+  <div class="mt-10 p-6 rounded-xl shadow-lg" style="background-color: #264743;">
+    <h2 class="text-xl font-bold mb-4 text-white">NCERT History</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="ncert-history-class-09.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 09</a>
+      <a href="ncert-history-class-10.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 10</a>
+      <a href="ncert-history-class-11.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 11</a>
+      <a href="ncert-history-class-12.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 12</a>
+    </div>
+  </div>
 
+  <div class="mt-10 p-6 rounded-xl shadow-lg" style="background-color: #264743;">
+    <h2 class="text-xl font-bold mb-4 text-white">NCERT Geography</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="ncert-geography-class-09.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 09</a>
+      <a href="ncert-geography-class-10.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 10</a>
+      <a href="ncert-geography-class-11.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 11</a>
+      <a href="ncert-geography-class-12.html" class="px-4 py-2 rounded-lg text-white font-semibold shadow-md transition transform hover:-translate-y-1 hover:shadow-lg" style="background-color: #ffffff20;">Class 12</a>
+    </div>
+  </div>
+
+  <!-- Rainbow strip -->
+  <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 animate-slide-x opacity-30"></div>
 
 </body>
 </html>
